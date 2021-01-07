@@ -82,8 +82,8 @@ def test(request,page_no):
                     question_id=question.question_id,
                     user_id=user.id
                 )
-            return redirect(test_close)
-            # return redirect(cattell_test/1)
+            # return redirect(test_close)
+            return redirect(cattell_detail,1)
         else:
             if request.POST["link_to"] == "<":
                 page_no = page_no - 1
