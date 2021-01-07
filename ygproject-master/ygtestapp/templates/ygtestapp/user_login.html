@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ログイン</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <form action="" method="POST">
+      {% csrf_token %}
+      {% if error_message != "" %}
+        <p>{{error_message}}</p>
+      {% endif %}
+      <p>ユーザー名</p>
+      <input name="username">
+      <p>パスワード</p>
+      <input type="password" name="password">
+      <input type="submit" value="ログイン">
+    </form>
+    
+  </body>
+</html>

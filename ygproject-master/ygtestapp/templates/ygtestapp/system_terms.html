@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>システム利用規約</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <p>システム利用規約</p>
+    <div>
+      {% for term in terms %}
+        <p>{{term.terms}}</p>
+      {% endfor %}
+    </div>
+    <a href="{% url 'top' %}">同意して次に進む</a>
+  </body>
+</html>

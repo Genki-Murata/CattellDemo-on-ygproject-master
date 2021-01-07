@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>被験者一覧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <a href="{% url 'top' %}">管理画面メニュー</a>
+    <p>被験者一覧</p>
+    <table>
+      <tr>
+        <th>検査日</th>
+        <th>判定型</th>
+        <th>E系統値</th>
+        <th>C系統値</th>
+        <th>A系統値</th>
+        <th>B系統値</th>
+        <th>D系統値</th>
+        <th>氏名</th>
+        <th>年齢</th>
+        <th>性別</th>
+        <th>最終学歴</th>
+        <th>最終職歴</th>
+        <th>勤続年数</th>
+        <th>役職</th>
+        <th>業種</th>
+        <th>職種</th>
+      </tr>
+      {% for participant in participants %}
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="{% url 'participant_show' participant.user_id %}">{{participant.last_name}} {{participant.first_name}}</a></td>
+          <td>
+            {% if participant.age is not None%}
+              {{participant.age}}
+            {% endif %}
+          </td>
+          <td>
+            {% if participant.sex == True %}
+              男
+            {% elif participant.sex == False %}
+              女
+            {% endif %}
+          </td>
+          <td>
+            {% if participant.final_education is not None%}
+              {{participant.final_education}}
+            {% endif %}
+          </td>
+          <td>
+            {% if participant.last_career is not None%}
+              {{participant.last_career}}
+            {% endif %}
+          </td>
+          <td>
+            {% if participant.duration is not None%}
+              {{participant.duration}}
+            {% endif %}
+          </td>
+          <td>
+            {% if participant.position is not None%}
+              {{participant.position}}
+            {% endif %}
+          </td>
+          <td>
+            {% if participant.business_type_id is not None%}
+              {{participant.business_type}}
+            {% endif %}
+          </td>
+          <td>
+            {% if participant.job_type_id is not None%}
+              {{participant.job_type}}
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

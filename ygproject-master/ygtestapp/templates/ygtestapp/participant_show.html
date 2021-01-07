@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>被験者詳細</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <a href="{% url 'top' %}">管理画面メニュー</a>
+    <a href="{% url 'participant_index' %}">被験者一覧</a>
+    <p>{{participant.last_name}} {{participant.first_name}}</p>
+    <table>
+      <tr>
+        <th>検査日</th>
+        <th>判定型</th>
+        <th>E系統値</th>
+        <th>C系統値</th>
+        <th>A系統値</th>
+        <th>B系統値</th>
+        <th>D系統値</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>氏名</th>
+        <th>カナ</th>
+        <th>年齢</th>
+        <th>性別</th>
+        <th>最終学歴</th>
+        <th>卒業年月</th>
+        <th>電話番号</th>
+        <th>住所</th>
+        <th>Eメール</th>
+      </tr>
+      <tr>
+        <td>{{participant.last_name}} {{participant.first_name}}</td>
+        <td>{{participant.last_name_kana}} {{participant.first_name_kana}}</td>
+        <td>
+          {% if participant.age is not None%}
+            {{participant.age}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.sex == True %}
+            男性
+          {% elif participant.sex == False %}
+            女性
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.final_education is not None%}
+            {{participant.final_education}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.graduation is not None%}
+            {{participant.graduation|date:"Y年n月j日"}}
+          {% endif %}
+        </td>
+        <td>{{participant.phone}}</td>
+        <td>
+          {% if participant.address is not None%}
+            {{participant.address}}
+          {% endif %}
+        </td>
+        <td>{{participant.email}}</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>最終職歴</th>
+        <th>勤続年数</th>
+        <th>退社年月</th>
+        <th>雇用形態</th>
+        <th>役職</th>
+        <th>業種</th>
+        <th>職種</th>
+        <th>特記事項</th>
+      </tr>
+      <tr>
+        <td>
+          {% if participant.last_career is not None%}
+            {{participant.last_career}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.duration is not None%}
+            {{participant.duration}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.termination_date is not None%}
+            {{participant.termination_date|date:"Y年n月j日"}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.employment_type_id is not None%}
+            {{participant.employment_type}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.position is not None%}
+            {{participant.position}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.business_type_id is not None%}
+            {{participant.business_type}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.job_type_id is not None%}
+            {{participant.job_type}}
+          {% endif %}
+        </td>
+        <td>
+          {% if participant.comment is not None%}
+            {{participant.comment}}
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>設問</th>
+        <th>回答</th>
+      </tr>
+      {% for answer in answers %}
+        <tr>
+          <td>{{answer.question.question}}</td>
+          <td>{{answer.answer}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+      {% comment %}▽▽ Murata ADD ▽▽{% endcomment %}
+      <h1>キャッテル</h1>
+      <table>
+        <tr>
+          <th>設問</th>
+          <th></th>
+          <th>回答</th>
+          {% for cattell_answer in cattell_answers %}
+            <tr>
+              <td>{{cattell_answer.question}}</td>
+              <td>　</td>
+              <td>{{cattell_answer.answer}}</td>
+            </tr>
+          {% endfor %}          
+      {% comment %} △△ Murata ADD △△{% endcomment %}
+  </body>
+</html>

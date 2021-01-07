@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>検査{{current_page_no}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <p>検査{{current_page_no}}/3</p>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div>
+        {% for question in questions %}
+          <p>{{question.question}}</p>
+          <div class="question">
+            <input type="radio" name="q_{{question.question_id}}" value="0">はい
+            <input type="radio" name="q_{{question.question_id}}" value="1">？
+            <input type="radio" name="q_{{question.question_id}}" value="2">いいえ
+          </div>
+        {% endfor %}
+      </div>
+      <div>
+        {% if current_page_no != 1 %}
+          <input type="submit" name="link_to" value="&lt;">
+        {% endif %}
+        {% if current_page_no == 3 %}
+          <input type="submit" name="link_to" value="検査を終了する">
+          {% comment %} <a href="/cattell/1">検査を終了する</a> {% endcomment %}
+        {% else %}
+          <input type="submit" name="link_to" value="&gt;">
+        {% endif %}
+      </div>
+    </form>
+    <div>
+      {% for answer in answers %}
+        <input class="answer" type="hidden" value="{{answer}}">
+      {% endfor %}
+    </div>
+    
+    <script type="text/javascript">
+      //answerタグにid追加
+      var elements = document.getElementsByClassName("answer");
+      for(var i=0;i<=elements.length-1;i++){
+        var no = i + 1;
+        elements[i].setAttribute("id","answer_"+no);
+      }
+
+      //ラジオスイッチに初期値をセット
+      var questions = document.getElementsByClassName("question");
+      for(var i=0;i<=questions.length-1;i++){
+        var switches = questions[i].children;
+        var searchId = "answer_" + switches[0].name.substr(2);
+        var answerElement = document.getElementById(searchId);
+        if (answerElement.value != "None") {
+          var index = Number(answerElement.value);
+          switches[index].checked = true ;
+        }
+      }
+    </script>
+  </body>
+</html>

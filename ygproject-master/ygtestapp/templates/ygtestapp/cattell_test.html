@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>検査{{current_page_no}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {% if current_page_no < 5 %}
+      <h1>フォームA検査{{current_page_no}}</h1>
+    {% else %}
+      <h1>フォームB検査{{current_page_no_formB}}</h1>
+    {% endif %}  
+    
+    {% if current_page_no == 1 %}
+      <form action="" method="post" class= "mondai">  
+        {% csrf_token %}  
+        <p>設問１</p>
+        <div class="reidai">  
+            <label><input type="radio" name= "mondai1-1" value="1" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai1-1" value="2" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai1-1" value="3" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai1-1" value="4" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>        
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai1-2" value="1" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai1-2" value="2" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai1-2" value="3" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai1-2" value="4" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>        
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai1-3" value="1" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai1-3" value="2" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai1-3" value="3" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai1-3" value="4" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>        
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">        
+      </form>
+    {% endif %}   
+
+    {% if current_page_no == 2 %}
+      <form action="" method="post" class= "mondai">   
+        {% csrf_token %} 
+        <p>設問１</p>
+        <div class="reidai">  
+            <label><input type="radio" name= "mondai2-1" value="1" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai2-1" value="2" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai2-1" value="3" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai2-1" value="4" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>        
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai2-2" value="1" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai2-2" value="2" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai2-2" value="3" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai2-2" value="4" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>        
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai2-3" value="1" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai2-3" value="2" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai2-3" value="3" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai2-3" value="4" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>        
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">
+      </form>        
+    {% endif %}      
+
+    {% if current_page_no == 3 %}    
+      <form action="" method="post" class= "mondai"> 
+        {% csrf_token %}   
+        <div class="reidai">  
+          <p>設問１</p>
+          <!-- <form action="" method="post" class= "mondai"> -->
+            <label><input type="radio" name= "mondai3-1" value="1" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai3-1" value="2" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai3-1" value="3" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai3-1" value="4" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>        
+          <!-- </form> -->
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+            <!-- <form action="" method="post" class= "mondai"> -->
+              <label><input type="radio" name= "mondai3-2" value="1" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai3-2" value="2" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai3-2" value="3" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai3-2" value="4" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">
+            <!-- <form action="" method="post" class= "mondai"> -->
+
+              <label><input type="radio" name= "mondai3-3" value="1" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai3-3" value="2" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai3-3" value="3" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai3-3" value="4" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">
+      </form>
+    {% endif %}     
+
+    {% if current_page_no == 4 %}    
+      <form action="" method="post" class= "mondai"> 
+        {% csrf_token %}   
+        <div class="reidai">  
+          <p>設問１</p>
+          <!-- <form action="" method="post" class= "mondai"> -->
+            <label><input type="radio" name= "mondai4-1" value="1" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai4-1" value="2" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai4-1" value="3" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai4-1" value="4" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>        
+          <!-- </form> -->
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+            <!-- <form action="" method="post" class= "mondai"> -->
+              <label><input type="radio" name= "mondai4-2" value="1" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai4-2" value="2" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai4-2" value="3" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai4-2" value="4" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">
+            <!-- <form action="" method="post" class= "mondai"> -->
+
+              <label><input type="radio" name= "mondai4-3" value="1" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai4-3" value="2" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai4-3" value="3" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai4-3" value="4" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">
+      </form>
+    {% endif %}     
+
+    {% if current_page_no == 5 %}    
+      <form action="" method="post" class= "mondai">  
+        {% csrf_token %}  
+        <p>設問１</p>
+        <div class="reidai">  
+            <label><input type="radio" name= "mondai5-1" value="1" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai5-1" value="2" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai5-1" value="3" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai5-1" value="4" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>        
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai5-2" value="1" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai5-2" value="2" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai5-2" value="3" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai5-2" value="4" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>        
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai5-3" value="1" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai5-3" value="2" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai5-3" value="3" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai5-3" value="4" class="radio"><img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image"></label>        
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">        
+      </form>
+    {% endif %}
+
+    {% if current_page_no == 6 %}
+      <form action="" method="post" class= "mondai">   
+        {% csrf_token %} 
+        <p>設問１</p>
+        <div class="reidai">  
+            <label><input type="radio" name= "mondai6-1" value="1" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai6-1" value="2" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai6-1" value="3" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai6-1" value="4" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>        
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai6-2" value="1" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai6-2" value="2" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai6-2" value="3" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai6-2" value="4" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>        
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">  
+              <label><input type="radio" name= "mondai6-3" value="1" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai6-3" value="2" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai6-3" value="3" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai6-3" value="4" class="radio"><img src="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png" width=5% class="radio_image"></label>        
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">
+      </form>        
+    {% endif %}      
+
+    {% if current_page_no == 7 %}    
+      <form action="" method="post" class= "mondai"> 
+        {% csrf_token %}   
+        <div class="reidai">  
+          <p>設問１</p>
+          <!-- <form action="" method="post" class= "mondai"> -->
+            <label><input type="radio" name= "mondai7-1" value="1" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai7-1" value="2" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai7-1" value="3" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai7-1" value="4" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>        
+          <!-- </form> -->
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+            <!-- <form action="" method="post" class= "mondai"> -->
+              <label><input type="radio" name= "mondai7-2" value="1" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai7-2" value="2" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai7-2" value="3" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai7-2" value="4" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">
+            <!-- <form action="" method="post" class= "mondai"> -->
+
+              <label><input type="radio" name= "mondai7-3" value="1" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai7-3" value="2" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai7-3" value="3" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai7-3" value="4" class="radio"><img src="https://1.bp.blogspot.com/-EdrLCTfeHCc/XpKjUk0FFsI/AAAAAAABYWU/K93N9M3dl-cbDwRE_6v2mBAU618IYmVNwCNcBGAsYHQ/s1600/medicalmask_washable_recycle.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">
+      </form>
+    {% endif %}     
+
+    {% if current_page_no == 8 %}    
+      <form action="" method="post" class= "mondai"> 
+        {% csrf_token %}   
+        <div class="reidai">  
+          <p>設問１</p>
+          <!-- <form action="" method="post" class= "mondai"> -->
+            <label><input type="radio" name= "mondai8-1" value="1" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai8-1" value="2" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai8-1" value="3" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+            <label><input type="radio" name= "mondai8-1" value="4" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>        
+          <!-- </form> -->
+        </div>   
+
+          <p>設問２</p>
+          <div class="reidai">  
+            <!-- <form action="" method="post" class= "mondai"> -->
+              <label><input type="radio" name= "mondai8-2" value="1" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai8-2" value="2" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai8-2" value="3" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai8-2" value="4" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>       
+
+          <p>設問３</p>
+          <div class="reidai">
+            <!-- <form action="" method="post" class= "mondai"> -->
+
+              <label><input type="radio" name= "mondai8-3" value="1" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai8-3" value="2" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai8-3" value="3" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>
+              <label><input type="radio" name= "mondai8-3" value="4" class="radio"><img src="https://2.bp.blogspot.com/-a-YDLlebc10/WI1zQJt_1_I/AAAAAAABBXc/oHbP_6eJ2E8ZLlixIzUiGSdfvDVvDotFACLcB/s800/money_narikin.png" width=5% class="radio_image"></label>        
+            <!-- </form> -->
+          </div>   
+          <input type="submit" name="link_to" value="時間経過">
+      </form>
+    {% endif %}   
+
+  </body>
+</html>
