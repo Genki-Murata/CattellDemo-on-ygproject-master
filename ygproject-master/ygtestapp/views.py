@@ -135,17 +135,19 @@ def cattell_test(request,page_no):
     template_name = "ygtestapp/cattell_test.html"
 
     # current_page_no:現在のページ
+    # current_page_no_formB:フォームB用ページ番号
     # next_page_no:次のページ
     context = {
         "current_page_no":page_no,
+        "current_page_no_formB":page_no - 4, 
         "next_page_no":page_no + 1,
-        "current_page_no_formB":page_no - 4,                        
     }
 
     # POSTのリクエストが来た場合
     if request.method == "POST":
 
         # current_page_no:現在のページ番号
+        # current_page_no_formB:フォームB用ページ番号        
         # next_page_no:次のページ番号
 
         context = {
