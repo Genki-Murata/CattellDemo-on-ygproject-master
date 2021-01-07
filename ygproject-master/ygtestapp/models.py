@@ -122,7 +122,7 @@ class Answer(models.Model):
 class Cattell_Answer(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     question = models.SmallIntegerField()
-    answer = models.SmallIntegerField()
+    answer = models.SmallIntegerField(null=True, blank=True)
     delete_flag = models.BooleanField(default=False)
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
@@ -132,7 +132,7 @@ class Cattell_Answer(models.Model):
 class Cattell_Answer_tmp(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     question = models.SmallIntegerField()
-    answer = models.SmallIntegerField()
+    answer = models.SmallIntegerField(null=True, blank=True)
     delete_flag = models.BooleanField(default=False)
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
