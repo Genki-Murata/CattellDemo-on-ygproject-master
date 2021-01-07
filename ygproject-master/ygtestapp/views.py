@@ -145,14 +145,10 @@ def cattell_test(request,page_no):
     # POSTのリクエストが来た場合
     if request.method == "POST":
 
-        # test1~test3:設問1～3
         # current_page_no:現在のページ番号
         # next_page_no:次のページ番号
 
         context = {
-                # "test1":request.POST.get("mondai"+str(page_no)+"-1"),
-                # "test2":request.POST.get("mondai"+str(page_no)+"-2"),
-                # "test3":request.POST.get("mondai"+str(page_no)+"-3"),
                 "current_page_no":page_no,
                 "current_page_no_formB":page_no - 4,                
                 "next_page_no":page_no + 1,            
