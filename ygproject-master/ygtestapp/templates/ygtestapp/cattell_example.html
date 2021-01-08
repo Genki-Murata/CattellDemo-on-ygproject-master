@@ -38,6 +38,31 @@
       
       <p>それでは「設問へ」のボタンを押して、1問目の問題から始めてください</p>
       <!-- <a class="next" href="/cattell/test/1">設問へ</a> -->
-      <a class="next" href="/cattell/test/1">設問へ</a>
-  </body>
+
+      <!-- a hrefに文字列と変数をくっつける方法がわからなっかたので、下記のようなコードになってます・・・ -->
+      {% if current_page_no == 1 %}
+        <a class="next" href="/cattell/test/1">設問へ</a>
+      {% endif %}
+      {% if current_page_no == 2 %}
+        <a class="next" href="/cattell/test/2">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 3 %}
+        <a class="next" href="/cattell/test/3">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 4 %}
+        <a class="next" href="/cattell/test/4">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 5 %}
+        <a class="next" href="/cattell/test/5">設問へ</a>
+      {% endif %}
+      {% if current_page_no == 6 %}
+        <a class="next" href="/cattell/test/6">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 7 %}
+        <a class="next" href="/cattell/test/7">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 8 %}
+        <a class="next" href="/cattell/test/8">設問へ</a>
+      {% endif %}        
+      </body>
 </html>
