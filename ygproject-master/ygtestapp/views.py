@@ -200,7 +200,7 @@ def cattell_test(request,page_no):
 
 
         # 次のページへ移行
-        return redirect(cattell_test,page_no)
+        return redirect(cattell_example,page_no)
 
     return render(request,template_name,context)
 
