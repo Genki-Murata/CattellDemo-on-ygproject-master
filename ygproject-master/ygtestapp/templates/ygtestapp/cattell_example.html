@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {% if current_page_no < 5 %}
+      <h1>フォームA検査{{current_page_no}}【例題】</h1>
+    {% else %}
+      <h1>フォームB検査{{current_page_no_formB}}【例題】</h1>
+    {% endif %}  
+    <h2>本場画面の例題説明をよく読んで設問へ進んでください。</h2>
+    <p>例題1を見てください～</p>
+
+    <h2>例題1</h2>
+
+    <div class="reidai">  
+      <form class= "mondai">
+        <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">
+        <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">
+        <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">
+        <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">     
+      </form>
+
+      <p>例題2を見てください～</p>
+
+      <h2>例題2</h2>
+
+        <form class= "mondai">
+          <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">
+          <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">
+          <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">
+          <img src="https://1.bp.blogspot.com/-zEKEpGCVUco/Ws2vxslzKaI/AAAAAAABLYM/B67RdLxkdkA8mylXhM8QGhXEnYxlJ-nLgCLcBGAs/s800/pose_happy_businessman_guts.png" width=5% class="radio_image">        
+        </form>
+      </div>
+      
+      <p>それでは「設問へ」のボタンを押して、1問目の問題から始めてください</p>
+      <!-- <a class="next" href="/cattell/test/1">設問へ</a> -->
+
+      <!-- a hrefに文字列と変数をくっつける方法がわからなっかたので、下記のようなコードになってます・・・ -->
+      {% if current_page_no == 1 %}
+        <a class="next" href="/cattell/test/1">設問へ</a>
+      {% endif %}
+      {% if current_page_no == 2 %}
+        <a class="next" href="/cattell/test/2">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 3 %}
+        <a class="next" href="/cattell/test/3">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 4 %}
+        <a class="next" href="/cattell/test/4">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 5 %}
+        <a class="next" href="/cattell/test/5">設問へ</a>
+      {% endif %}
+      {% if current_page_no == 6 %}
+        <a class="next" href="/cattell/test/6">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 7 %}
+        <a class="next" href="/cattell/test/7">設問へ</a>
+      {% endif %}        
+      {% if current_page_no == 8 %}
+        <a class="next" href="/cattell/test/8">設問へ</a>
+      {% endif %}        
+      </body>
+</html>

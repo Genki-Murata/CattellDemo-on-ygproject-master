@@ -124,6 +124,19 @@ def cattell_detail(request,page_no):
 
     return render(request,template_name,context)
 
+#キャッテル_例題
+def cattell_example(request,page_no):
+    template_name = "ygtestapp/cattell_example.html"
+
+    context = {
+        "current_page_no":page_no,
+        "current_page_no_formB":page_no - 4,         
+        "next_page_no":page_no + 1,     
+        
+    }
+
+    return render(request,template_name,context)    
+
 #キャッテル_テスト    
 def cattell_test(request,page_no):
     #固定値 (表示する問題数)
@@ -187,7 +200,7 @@ def cattell_test(request,page_no):
 
 
         # 次のページへ移行
-        return redirect(cattell_test,page_no)
+        return redirect(cattell_example,page_no)
 
     return render(request,template_name,context)
 
