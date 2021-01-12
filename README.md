@@ -27,7 +27,7 @@ docker-compose up -d
 
 ■web(django)コンテナでの作業の為、コンテナにアクセス
 
-docker exec -it ygproject_web_1 bash
+docker exec -it ygproject-master_web_1 bash
 
 ※ ygproject_web_1 はコンテナ名
 
