@@ -14,10 +14,6 @@ cd [path]
 
 docker-compose up -d
 
-※この時点でコンテナが作成され自動実行されるが、
-　front（react）は node_modules がない為、エラーが出てコンテナが落ちる
-
-
 以下、各コンテナで対応を行う
 
 
