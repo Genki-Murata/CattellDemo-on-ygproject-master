@@ -29,7 +29,7 @@ docker-compose up -d
 
 docker exec -it ygproject-master_web_1 bash
 
-※ ygproject_web_1 はコンテナ名
+※ ygproject-master_web_1 はコンテナ名
 
 ■マイグレーション実行
 
