@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 #キャッテル_テスト前
 def cattell_detail(request,page_no):
-    template_name = "ygtestapp/cattell_detail.html"
+    template_name = "cattell_detail.html"
 
     context = {
         "current_page_no":page_no,
@@ -12,7 +12,7 @@ def cattell_detail(request,page_no):
 
 #キャッテル_例題
 def cattell_example(request,page_no):
-    template_name = "ygtestapp/cattell_example.html"
+    template_name = "cattell_example.html"
 
     context = {
         "current_page_no":page_no,
@@ -31,7 +31,7 @@ def cattell_test(request,page_no):
     start_id = (page_no - 1) * q_cnt_per_page + 1
 
     # 下記のテンプレートファイルを返す
-    template_name = "ygtestapp/cattell_test.html"
+    template_name = "cattell_test.html"
 
     # current_page_no:現在のページ
     # current_page_no_formB:フォームB用ページ番号
@@ -92,6 +92,6 @@ def cattell_test(request,page_no):
 
 
 def cattell_break(request):
-    template_name = "ygtestapp/cattell_break.html"
+    template_name = "cattell_break.html"
     return render(request,template_name)
 
