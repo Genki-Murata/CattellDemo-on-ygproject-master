@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ygtestapp',
     'accounts',
+    'cattellApp',
 ]
 
 MIDDLEWARE = [
